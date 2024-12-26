@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Games - Trafolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="games-page">
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Trapolio Logo">
-    </div>
+<body>
     <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="games.html">GAMES</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">index</a></li>
+                <li><a href="games.html" class="active">GAMES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <main class="games-container">
-    <h1 class="main-title">OUR PASSION IS GAMING!</h1>
-    
-    <p class="company-description">
-      Trafolio is an independent game studio focused on delivering fun and unforgettable experiences that bring people together globally.
-    </p>
+    <main>
+        <div class="games-hero">
+            <h1>OUR PASSION IS GAMING!</h1>
+            <p class="games-description">
+                Trafolio is an independent game studio focused on delivering fun and unforgettable experiences that bring people together globally.
+            </p>
+            
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="images/elemental-heroes.jpg" alt="Elemental Heroes Game">
+                </div>
+                <div class="game-info">
+                    <div class="game-logo">
+                        <img src="images/elemental-heroes.jpg" alt="Elemental Heroes Logo">
+                    </div>
+                    <h2>ELEMENTAL HEROES</h2>
+                    <button class="read-more">Read More</button>
+                </div>
+            </div>
+        </div>
+    </main>
 
-    <div class="game-card">
-      <img src="game-image.jpg" alt="Elemental Heroes" class="game-image">
-      <div class="game-logo">
-        <img src="small-logo.png" alt="Game Logo">
-      </div>
-      <h2 class="game-title">ELEMENTAL HEROES</h2>
-      <button class="read-more">Read More</button>
-    </div>
-  </main>
+    <footer>
+        <p>&copy; 2024 Tüm hakları saklıdır.</p>
+    </footer>
 </body>
-</html>
+</html> 
