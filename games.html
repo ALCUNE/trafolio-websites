@@ -1,73 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trafolio - Games</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Games - Trafolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="games-page">
   <header>
     <div class="logo">
-      <img src="images/logo.png" alt="Trafolio Logo">
+      <img src="logo.png" alt="Trapolio Logo">
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="games.html" class="active">Games</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="games.html">GAMES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <div class="hero" style="background-image: url('images/games.jpg');">
-      <h1>Our Games</h1>
-      <p>Explore our exciting portfolio of games.</p>
-    </div>
+  <main class="games-container">
+    <h1 class="main-title">OUR PASSION IS GAMING!</h1>
+    
+    <p class="company-description">
+      Trafolio is an independent game studio focused on delivering fun and unforgettable experiences that bring people together globally.
+    </p>
 
-    <section class="games-grid">
-      <article class="game-card">
-        <img src="images/game1.jpg" alt="Oyun 1">
-        <h2>Oyun 1</h2>
-        <p>Oyun açıklaması buraya gelecek.</p>
-        <a href="#" class="play-button">Oyna</a>
-      </article>
-
-      <article class="game-card">
-        <img src="images/game2.jpg" alt="Oyun 2">
-        <h2>Oyun 2</h2>
-        <p>Oyun açıklaması buraya gelecek.</p>
-        <a href="#" class="play-button">Oyna</a>
-      </article>
-
-      <article class="game-card">
-        <img src="images/game3.jpg" alt="Oyun 3">
-        <h2>Oyun 3</h2>
-        <p>Oyun açıklaması buraya gelecek.</p>
-        <a href="#" class="play-button">Oyna</a>
-      </article>
-    </section>
-
-    <section class="game-categories">
-      <h2>Oyun Kategorileri</h2>
-      <div class="category-list">
-        <a href="#" class="category">Aksiyon</a>
-        <a href="#" class="category">Macera</a>
-        <a href="#" class="category">Bulmaca</a>
-        <a href="#" class="category">Strateji</a>
+    <div class="game-card">
+      <img src="game-image.jpg" alt="Elemental Heroes" class="game-image">
+      <div class="game-logo">
+        <img src="small-logo.png" alt="Game Logo">
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 Trafolio. Tüm hakları saklıdır.</p>
-      <nav class="footer-nav">
-        <a href="privacy.html">Gizlilik Politikası</a>
-        <a href="terms.html">Kullanım Şartları</a>
-      </nav>
+      <h2 class="game-title">ELEMENTAL HEROES</h2>
+      <button class="read-more">Read More</button>
     </div>
-  </footer>
+  </main>
 </body>
 </html>
