@@ -1,319 +1,232 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Google Fonts - Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Rubik', sans-serif;
     line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0A0D0F;
+    color: white;
 }
 
-nav {
-    background-color: #15191E;
-    padding: 1rem;
+/* Games Page Specific */
+.games-page {
+    background-color: #FEFFEF;
 }
 
-.nav-container {
-    max-width: 1200px;
+.games-page .games-hero h1,
+.games-page .games-description {
+    color: #0A0D0F;
+}
+
+/* Header & Navigation */
+.top-nav {
+    background-color: #0A0D0F;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
+    width: 95%;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-top: none; /* Hide top border */
+    padding: 0;
+}
+
+
+/* Ensure nav spans the full width of .top-nav */
+.top-nav nav {
+    width: 100%; /* Full width */
+}
+
+/* Ensure menu-items and logo align properly */
+nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    padding: 0 1rem;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-}
-
-nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+nav ul {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-nav ul li {
-    margin: 0 1rem;
+nav ul .logo {
+    margin: 0;
+    padding: 0;    
 }
 
-nav ul li a {
+nav ul .logo img {
+    display: block;
+    height: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    border-bottom-left-radius: 15px; /* Apply rounded corner to bottom-left */
+
+}
+
+nav ul .menu-items {
+    margin-left: auto;
+    display: flex;
+    gap: 80px; /* Space between menu items */
+}
+
+nav ul .menu-items a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     text-transform: uppercase;
+    transition: color 0.3s ease;
+    line-height: 60px;
 }
 
-nav ul li a.active {
-    color: #DC143C;
+nav ul .menu-items a:hover {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-nav ul li:last-child a {
-    color: #DC143C;
+.contact-link {
+    color: #C1233C !important;
+    margin-right: 80px; /* Space from right corner */
 }
 
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.contact-link:hover {
+    color: white !important;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.games-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.game-card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.form-group textarea {
-    height: 150px;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
+/* Hero Section */
 .hero-section {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 200px); /* Nav ve footer'ı hesaba katarak */
+    min-height: calc(100vh - 100px);
     text-align: center;
 }
 
 .center-logo {
-    margin-bottom: 2rem;
-}
-
-.center-logo img {
-    max-width: 300px; /* Logo boyutunu buradan ayarlayabilirsiniz */
+    max-width: 100%;
     height: auto;
 }
 
-.hero-text {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-/* Games sayfası için yeni stiller */
+/* Games Page Styles */
 .games-hero {
-    text-align: center;
-    padding: 4rem 1rem;
-    max-width: 1200px;
+    width: 95%;
+    max-width: 1920px;
     margin: 0 auto;
+    padding-top: 120px; /* Consistent top padding */
+    text-align: center;
 }
 
 .games-hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+    font-size: 3.125rem;
+    margin-bottom: 1rem;
+    color: #0A0D0F;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .games-description {
-    font-size: 1.2rem;
-    color: #666;
     max-width: 800px;
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 2rem;
+    color: #0A0D0F;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.game-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .game-image {
-    margin-bottom: 2rem;
-    position: relative;
+    max-width: 600px;
+    width: 100%;
 }
 
 .game-image img {
     width: 100%;
-    border-radius: 10px;
-    display: block;
+    height: auto;
+    object-fit: contain;
 }
 
-.game-info {
-    text-align: center;
-    position: relative;
-}
-
-.game-logo {
-    width: 80px;
-    height: 80px;
-    margin: -40px auto 1rem auto;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 3px solid white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.game-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.game-info h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.read-more {
-    background-color: #DC143C;
-    color: white;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.read-more:hover {
-    background-color: #b01031;
-}
-
-/* Contact sayfası için yeni stiller */
+/* Contact Page Styles */
 .contact-page {
-    background-color: #C41E3A;
     background-image: url('images/contact-bg.jpg');
-    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-content {
+    width: 95%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 120px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 100px);
-    padding: 2rem;
-    text-align: center;
+    align-items: flex-start;
+    flex: 1;
 }
 
-.contact-logo {
-    margin-bottom: 3rem;
+.contact-content img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-.contact-logo h1 {
-    color: white;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-}
-
-.tagline {
-    color: white;
-    font-size: 1.2rem;
-    opacity: 0.9;
+/* Footer Styles */
+.contact-footer {
+    width: 95%;
+    max-width: 1920px;
+    margin: auto auto 0 auto;
+    padding-bottom: 2rem;
 }
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
 }
 
-.social-icon {
-    background-color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+.social-links a {
+    display: inline-block;
     transition: transform 0.3s ease;
 }
 
-.social-icon img {
-    width: 24px; /* İkon boyutunu ayarlayabilirsiniz */
-    height: 24px;
+.social-links img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
-.social-icon:hover {
+.social-links a:hover {
     transform: translateY(-5px);
 }
 
 .copyright {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
     color: white;
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
-
-/* Eski contact form stillerini kaldırabilirsiniz */
-.contact-container,
-.contact-form,
-.form-group,
-.submit-btn {
-    display: none;
-} 
